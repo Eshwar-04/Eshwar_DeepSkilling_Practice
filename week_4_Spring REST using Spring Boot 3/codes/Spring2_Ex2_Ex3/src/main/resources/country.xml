@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="countryIndia" class="com.cognizant.Spring2.model.Country">
+        <property name="code" value="IN"/>
+        <property name="name" value="India"/>
+    </bean>
+    
+    <bean id="countryUSA" class="com.cognizant.Spring2.model.Country">
+        <property name="code" value="US"/>
+        <property name="name" value="United States"/>
+    </bean>
+    
+    <bean id="countryUAE" class="com.cognizant.Spring2.model.Country">
+        <property name="code" value="UE"/>
+        <property name="name" value="U A E"/>
+    </bean>
+    
+    <bean id="countries" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="countryIndia"/>
+                <ref bean="countryUSA"/>
+                <ref bean="countryUAE"/>
+                
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
